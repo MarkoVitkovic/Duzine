@@ -76,7 +76,7 @@ namespace Duzine
 			NumberStyles styles;
 			IFormatProvider provider;
 			Duzina duz;
-			Console.WriteLine("Molimo unesite duzine koje zelite zbrojiti(oduzeti).\n");
+			Console.WriteLine("Molimo unesi duzine koje zelite zbrojiti(oduzeti).\n");
 			unos = Console.ReadLine();
 			Console.WriteLine("\n");
 			Console.WriteLine("Molimo unesite mjernu jedinicu u kojoj zelite rezultat(mm,cm,m,km).\n");
