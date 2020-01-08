@@ -74,6 +74,7 @@ namespace Duzine
 			string unos;
 			string mj_fin;
 			NumberStyles styles;
+			//Komentar
 			IFormatProvider provider;
 			Duzina duz;
 			Console.WriteLine("Molimo unesite duzine koje zelite zbrojiti(oduzeti).\n");
