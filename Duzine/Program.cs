@@ -16,13 +16,13 @@ namespace Duzine
 
 		static void Main(string[] args)
 		{
-			List<int> operandi = new List<int>();
+			List<double> operandi = new List<double>();
 			List<char> operatori = new List<char>();
 			int duzina;
 			string unos;
-			int cm, mm, m, km;
+			double cm, mm, m, km;
 			Console.WriteLine("Molimo unesite duzine koje zelite zbrojiti(oduzeti).\n");
-			unos = "3mm + 45cm - 38mm + 56km + 13m";
+			unos = "3m + 45cm - 38mm + 56km + 13mm";
 			char[] spearator = { '+', '-' };
 			String[] strlist = unos.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
 			foreach (String s in strlist)
@@ -31,16 +31,16 @@ namespace Duzine
 				if (s.TrimEnd(null).EndsWith("mm"))
 				{
 					string a=s.Remove(s.LastIndexOf("m")-1,2);
-					mm = int.Parse(a);
-					mm *= 1000;
+					mm = Double.Parse(a);
+					mm /= 1000;
 					operandi.Add(mm);
 					continue;
 				}
 				if (s.TrimEnd(null).EndsWith("cm"))
 				{
 					string a = s.Remove(s.LastIndexOf("c"), 2);
-					cm = int.Parse(a);
-					cm *= 100;
+					cm = Double.Parse(a);
+					cm /= 100;
 					operandi.Add(cm);
 					continue;
 				}
@@ -48,20 +48,24 @@ namespace Duzine
 				if (s.TrimEnd(null).EndsWith("km"))
 				{
 					string a = s.Remove(s.LastIndexOf("k"), 2);
-					km = int.Parse(a);
-					km /= 1000;
+					km = Double.Parse(a);
+					km *= 1000;
 					operandi.Add(km);
 					continue;
 				}
 				if (s.TrimEnd(null).EndsWith("m"))
 				{
 					string a = s.Remove(s.LastIndexOf("m"), 1);
-					m = int.Parse(a);
+					m = Double.Parse(a);
 					operandi.Add(m);
 					continue;
 				}
+				
 
-
+			}
+			foreach (double aPart in operandi)
+			{
+				Console.WriteLine(aPart);
 			}
 			//Console.WriteLine("\n");
 			//Console.WriteLine("Molimo unesite mjernu jedinicu u kojoj zelite rezultat(mm,cm,m,km).\n");
