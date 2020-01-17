@@ -68,17 +68,20 @@ namespace Duzine
 				Console.WriteLine(s);
 
 			}
-			foreach (double aPart in operandi)
+			//foreach (double aPart in operandi)
+			//{
+			//	Console.WriteLine(aPart);
+			//}
+			//foreach (int aPart in duzine)
+			//{
+			//	Console.WriteLine(aPart);
+			//}
+			for (int i = 0; i < unos.Length; i++)
 			{
-				Console.WriteLine(aPart);
+				int sizes = duzine.ElementAt(i+1);
+				int velicina = operatori.Count;
+				Console.WriteLine(sizes);
 			}
-			foreach (int aPart in duzine)
-			{
-				Console.WriteLine(aPart);
-			}
-
-			int velicina = operatori.Count;
-			
 
 			//Console.WriteLine("\n");
 			//Console.WriteLine("Molimo unesite mjernu jedinicu u kojoj zelite rezultat(mm,cm,m,km).\n");
