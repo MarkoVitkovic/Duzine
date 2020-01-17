@@ -18,6 +18,7 @@ namespace Duzine
 		{
 			List<double> operandi = new List<double>();
 			List<char> operatori = new List<char>();
+			List<int> duzine = new List<int>();
 			int duzina;
 			string unos;
 			double cm, mm, m, km;
@@ -27,7 +28,10 @@ namespace Duzine
 			String[] strlist = unos.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
 			foreach (String s in strlist)
 			{
-			
+				int size = s.Length;
+
+				duzine.Add(size);
+
 				if (s.TrimEnd(null).EndsWith("mm"))
 				{
 					string a=s.Remove(s.LastIndexOf("m")-1,2);
@@ -60,13 +64,22 @@ namespace Duzine
 					operandi.Add(m);
 					continue;
 				}
-				
+
+				Console.WriteLine(s);
 
 			}
 			foreach (double aPart in operandi)
 			{
 				Console.WriteLine(aPart);
 			}
+			foreach (int aPart in duzine)
+			{
+				Console.WriteLine(aPart);
+			}
+
+			int velicina = operatori.Count;
+			
+
 			//Console.WriteLine("\n");
 			//Console.WriteLine("Molimo unesite mjernu jedinicu u kojoj zelite rezultat(mm,cm,m,km).\n");
 			//mj_fin = Console.ReadLine();
