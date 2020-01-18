@@ -19,11 +19,12 @@ namespace Duzine
 			List<double> operandi = new List<double>();
 			List<char> operatori = new List<char>();
 			List<int> duzine = new List<int>();
+			int uku=0;
 			int duzina;
 			string unos;
 			double cm, mm, m, km;
 			Console.WriteLine("Molimo unesite duzine koje zelite zbrojiti(oduzeti).\n");
-			unos = "3m + 45cm - 38mm + 56km + 13mm";
+			unos = "45m + 4cm - 54km";
 			char[] spearator = { '+', '-' };
 			String[] strlist = unos.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
 			foreach (String s in strlist)
@@ -31,7 +32,7 @@ namespace Duzine
 				int size = s.Length;
 
 				duzine.Add(size);
-
+				
 				if (s.TrimEnd(null).EndsWith("mm"))
 				{
 					string a=s.Remove(s.LastIndexOf("m")-1,2);
@@ -48,7 +49,7 @@ namespace Duzine
 					operandi.Add(cm);
 					continue;
 				}
-				
+			
 				if (s.TrimEnd(null).EndsWith("km"))
 				{
 					string a = s.Remove(s.LastIndexOf("k"), 2);
@@ -65,8 +66,6 @@ namespace Duzine
 					continue;
 				}
 
-				Console.WriteLine(s);
-
 			}
 			//foreach (double aPart in operandi)
 			//{
@@ -76,11 +75,18 @@ namespace Duzine
 			//{
 			//	Console.WriteLine(aPart);
 			//}
-			for (int i = 0; i < unos.Length; i++)
+			for (int i = 0; i < duzine.Count; i++)
 			{
-				int sizes = duzine.ElementAt(i+1);
+				int sizes = duzine.ElementAt(i);
 				int velicina = operatori.Count;
-				Console.WriteLine(sizes);
+				int operato = sizes + velicina;
+				uku += operato;
+				char znak = unos.ElementAt(uku);
+				operatori.Add(znak);
+				foreach (char aPart in operatori)
+				{
+				Console.WriteLine(aPart);
+				}
 			}
 
 			//Console.WriteLine("\n");
