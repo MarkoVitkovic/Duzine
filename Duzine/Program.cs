@@ -20,11 +20,10 @@ namespace Duzine
 			List<char> operatori = new List<char>();
 			List<int> duzine = new List<int>();
 			int uku=0;
-			int duzina;
-			string unos;
+			string unos , mj_fin;
 			double cm, mm, m, km;
 			Console.WriteLine("Molimo unesite duzine koje zelite zbrojiti(oduzeti).\n");
-			unos = "45m + 4cm - 54km";
+			unos = Console.ReadLine();
 			char[] spearator = { '+', '-' };
 			String[] strlist = unos.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
 			foreach (String s in strlist)
@@ -67,15 +66,8 @@ namespace Duzine
 				}
 
 			}
-			//foreach (double aPart in operandi)
-			//{
-			//	Console.WriteLine(aPart);
-			//}
-			//foreach (int aPart in duzine)
-			//{
-			//	Console.WriteLine(aPart);
-			//}
-			for (int i = 0; i < duzine.Count; i++)
+			
+			for (int i = 0; i < duzine.Count-1; i++)
 			{
 				int sizes = duzine.ElementAt(i);
 				int velicina = operatori.Count;
@@ -83,35 +75,49 @@ namespace Duzine
 				uku += operato;
 				char znak = unos.ElementAt(uku);
 				operatori.Add(znak);
-				foreach (char aPart in operatori)
-				{
-				Console.WriteLine(aPart);
-				}
 			}
 
-			//Console.WriteLine("\n");
-			//Console.WriteLine("Molimo unesite mjernu jedinicu u kojoj zelite rezultat(mm,cm,m,km).\n");
-			//mj_fin = Console.ReadLine();
-			//Console.WriteLine("\n");
+			double sve_ukupno = operandi.ElementAt(0);
 
-			//switch (mj_fin)
-			//{
-			//	case "mm":
-			//		Console.WriteLine("{0}mm je {1}m.", duz.mm, duz.Value);
-			//		break;
-			//	case "cm":
-			//		Console.WriteLine("{0}cm je {1}m.", duz.cm, duz.Value);
-			//		break;
-			//	case "m":
-			//		Console.WriteLine("{0}m je {1}m.", duz.m, duz.Value);
-			//		break;
-			//	case "km":
-			//		Console.WriteLine("{0}km je {1}m.", duz.km, duz.Value);
-			//		break;
-			//	default:
-			//		Console.WriteLine("Pogresan unos");
-			//		break;
-			//}
+			for (int i = 1, j = 0; i < operandi.Count; i++, j++)
+			{
+				
+				double operand = operandi.ElementAt(i);
+				char znak = operatori.ElementAt(j);
+
+				switch (znak)
+				{
+					case '+':
+						sve_ukupno += operand;
+						break;
+					case '-':
+						sve_ukupno -= operand;
+						break;
+				}
+			}
+			Console.WriteLine("\n");
+			Console.WriteLine("Molimo unesite mjernu jedinicu u kojoj zelite rezultat(mm,cm,m,km).\n");
+			mj_fin = Console.ReadLine();
+			Console.WriteLine("\n");
+
+			switch (mj_fin)
+			{
+				case "mm":
+					Console.WriteLine("Rezultat je {0}mm", sve_ukupno*1000);
+					break;
+				case "cm":
+					Console.WriteLine("Rezultat je {0}cm", sve_ukupno*100);
+					break;
+				case "m":
+					Console.WriteLine("Rezultat je {0}m", sve_ukupno);
+					break;
+				case "km":
+					Console.WriteLine("Rezultat je {0}km", sve_ukupno/1000);
+					break;
+				default:
+					Console.WriteLine("Rezultat je Pogresan unos");
+					break;
+			}
 			Console.ReadKey();
 
 
