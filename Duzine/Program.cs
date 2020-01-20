@@ -103,19 +103,19 @@ namespace Duzine
 			switch (mj_fin)
 			{
 				case "mm":
-					Console.WriteLine("Rezultat je {0}mm", sve_ukupno*1000);
+					Console.WriteLine("Result is {0}mm", sve_ukupno*1000);
 					break;
 				case "cm":
-					Console.WriteLine("Rezultat je {0}cm", sve_ukupno*100);
+					Console.WriteLine("Result is {0}cm", sve_ukupno*100);
 					break;
 				case "m":
-					Console.WriteLine("Rezultat je {0}m", sve_ukupno);
+					Console.WriteLine("Result is {0}m", sve_ukupno);
 					break;
 				case "km":
-					Console.WriteLine("Rezultat je {0}km", sve_ukupno/1000);
+					Console.WriteLine("Result is {0}km", sve_ukupno/1000);
 					break;
 				default:
-					Console.WriteLine("Rezultat je Pogresan unos");
+					Console.WriteLine("Wrong input");
 					break;
 			}
 			Console.ReadKey();
