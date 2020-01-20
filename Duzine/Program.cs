@@ -22,7 +22,7 @@ namespace Duzine
 			int uku=0;
 			string unos , mj_fin;
 			double cm, mm, m, km;
-			Console.WriteLine("Molimo unesite duzine koje zelite zbrojiti(oduzeti).\n");
+			Console.WriteLine("Please enter sizes wich you want to add(deduct).\n");
 			unos = Console.ReadLine();
 			char[] spearator = { '+', '-' };
 			String[] strlist = unos.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
@@ -96,7 +96,7 @@ namespace Duzine
 				}
 			}
 			Console.WriteLine("\n");
-			Console.WriteLine("Molimo unesite mjernu jedinicu u kojoj zelite rezultat(mm,cm,m,km).\n");
+			Console.WriteLine("Please enter unit of measurement(mm,cm,m,km).\n");
 			mj_fin = Console.ReadLine();
 			Console.WriteLine("\n");
 
