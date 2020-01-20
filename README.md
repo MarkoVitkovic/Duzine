@@ -2,6 +2,18 @@ Program koji će omogućiti zbrajanje i oduzimanje udaljenosti zadanih različit
 
 Program that can add or deduct sizes from user input. And return that as a result. Check code to see what is need for this! Thanks!
 
-![Test Image 1](https://github.com/MarkoVitkovic/Size_add-deduct/blob/master/prva.jpg)
+![](https://github.com/MarkoVitkovic/Size_add-deduct/blob/master/prva.jpg)
 
-![Test Image 2]("https://github.com/MarkoVitkovic/Size_add-deduct/blob/master/druga.jpg")
+
+
+
+
+
+
+
+
+
+
+
+
+![]("https://github.com/MarkoVitkovic/Size_add-deduct/blob/master/druga.jpg")
