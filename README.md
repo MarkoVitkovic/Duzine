@@ -2,4 +2,6 @@ Program koji će omogućiti zbrajanje i oduzimanje udaljenosti zadanih različit
 
 Program that can add or deduct sizes from user input. And return that as a result. Check code to see what is need for this! Thanks!
 
+![Test Image 1](prva.jpgn)
 
+![Test Image 2]("druga.jpng")
