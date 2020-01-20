@@ -17,3 +17,26 @@ Program that can add or deduct sizes from user input. And return that as a resul
 
 
 ![]("https://github.com/MarkoVitkovic/Size_add-deduct/blob/master/druga.jpg")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
