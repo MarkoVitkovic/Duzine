@@ -22,13 +22,16 @@ Program is made in c#. I am so proud of this project as this is one of my first 
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 
 ## Setup
-1.Open your Visual Studio Environment and Click File->New Project</br>
-![](http://csharp.net-informations.com/gui/img/new-project.png)</br>
-2.Then you will get a New Project Dialogue Box asking in which language you want to create a new project.</br>
-![](http://csharp.net-informations.com/gui/img/visual-studio.png)</br>
-3.Select Visual C# from the list, then you will get the following screen.</br>
-![](http://csharp.net-informations.com/gui/img/form-control.png)</br>
-4.Now you can add controls in your Form Control.</br>
+1.Open Visual Studio 2019.</br>
+
+2.On the start window, choose Create a new project.</br>
+![](https://docs.microsoft.com/en-us/visualstudio/get-started/media/vs-2019/create-new-project-dark-theme.png?view=vs-2019)</br>
+3.On the Create a new project window, enter or type console in the search box. Next, choose C# from the Language list, and then choose Windows from the Platform list.</br>
+
+* After you apply the language and platform filters, choose the Console App (.NET Core) template, and then choose Next.</br>
+![](https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png?view=vs-2019)</br>
+4.In the Configure your new project window, type or enter HelloWorld in the Project name box. Then, choose Create.</br>
+![](https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/media/vs-2019/csharp-name-your-helloworld-project.png?view=vs-2019)</br>
 
 
 ## Learn More
