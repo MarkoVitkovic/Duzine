@@ -52,19 +52,17 @@ Code:</br>
 
 ## Features
 List of features ready and TODOs for future development
-* Create new file
-* Open existing file
-* Edit new or existing file
+* Add/deduct size
+* Output size in mm,m,cm,km (choose!)
 
 To-do list:
-* Tool box
-* can open more formats
+* none
 
 ## Status
 Project is: _finished_
 
 ## Inspiration
-First csh GUI program from me.
+My most loved project! I did this as my final exam.
 
 ## Contact
 Created by [Marko Vitkovic](https://github.com/MarkoVitkovic) - feel free to contact me!
