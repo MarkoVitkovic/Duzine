@@ -12,7 +12,7 @@
 * [Contact](#contact)
 
 ## General info
-Program is made in c#. I am so proud of this project as this is one of my first and hardest by then projects. So in this project you adding or deducting anz type of size (mm,cm,m,km) and as result you get one parsed size. Example, user input 1km + 30m and output is 1.03km or if he wants in m or cm he can choose.
+Program is made in c#. I am so proud of this project as this is one of my first and hardest by then projects. So in this project you adding or deducting anz type of size (mm,cm,m,km) and as result you get one parsed size. Example, user input 1km + 30m and output is 1.03km or if he wants in m or cm he can choose. Feel free to clone or download this repo.
 
 
 ## Screenshots
@@ -41,14 +41,28 @@ To learn C#, check out the [C# docs](https://docs.microsoft.com/en-us/dotnet/csh
 
 ## Code Examples
 Code:</br>
-`if(saveFileDialog1.ShowDialog() == DialogResult.OK)`</br>
+`List<double> operandi = new List<double>();`</br>
+			`List<char> operatori = new List<char>();`</br>
+			`List<int> duzine = new List<int>();`</br>
+			`int uku=0;`</br>
+			`string unos , mj_fin;`</br>
+			`double cm, mm, m, km;`</br>
+			`Console.WriteLine("Please enter sizes wich you want to add(deduct).\n");`</br>
+			`unos = Console.ReadLine();`</br>
+			`char[] spearator = { '+', '-' };`</br>
+			`String[] strlist = unos.Split(spearator, StringSplitOptions.RemoveEmptyEntries);`</br>
+			`foreach (String s in strlist)`</br>
 			`{`</br>
-				`using (StreamWriter writer = new StreamWriter(saveFileDialog1.FileName))`</br>
+				`int size = s.Length;`</br>
+				`duzine.Add(size);`</br>
+				`if (s.TrimEnd(null).EndsWith("mm"))`</br>
 				`{`</br>
-					`writer.Write(textBox1.Text);`</br>
+				`	string a=s.Remove(s.LastIndexOf("m")-1,2);`</br>
+				`	mm = Double.Parse(a);`</br>
+				`	mm /= 1000;`</br>
+				`	operandi.Add(mm);`</br>
+				`	continue;`</br>
 				`}`</br>
-			`}`</br>
-
 
 ## Features
 List of features ready and TODOs for future development
@@ -73,12 +87,6 @@ Created by [Marko Vitkovic](https://github.com/MarkoVitkovic) - feel free to con
 
 
 
-Program koji će omogućiti zbrajanje i oduzimanje udaljenosti zadanih različitim jedinicama (m, km, cm, mm). Na primjer, da korisnik može napisati „1 km + 30 m“ i da kao rezultat dobije „1.03 km“ ili da za „1 km – 920 m“ kao rezultat dobije „80 m“. Treba omogućiti da se rezultat prikaže u jedinicama koje korisnik zada te da se operacija može izvesti s proizvoljnim brojem udaljenosti.
-
-Program that can add or deduct sizes from user input. And return that as a result. Check code to see what is need for this! Thanks!
-
-
-![](https://github.com/MarkoVitkovic/Size_add-deduct/blob/master/prva.jpg)
 
 
 
